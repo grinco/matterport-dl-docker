@@ -4,7 +4,7 @@ if [ -z "$SPACE_ID" ]; then
         echo "You must provide Space ID as an environment variable -e 'SPACE_ID=XXXXXXXX'"
         exit 1;
 elif [ -d "$SPACE_ID" ]; then
-        python3 matterport-dl.py https://my.matterport.com/show/?m=${SPACE_ID} 127.0.0.1 8080
+        python3 matterport-dl.py https://my.matterport.com/show/?m=${SPACE_ID} 0.0.0.0 8080
         exit 0
 else
 	python3 matterport-dl.py https://my.matterport.com/show/?m=${SPACE_ID}
